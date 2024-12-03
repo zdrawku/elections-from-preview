@@ -1,0 +1,184 @@
+<div class="column-layout group">
+  <div class="row-layout header">
+    <div class="row-layout year_container">
+      <div class="column-layout year">
+        <div class="row-layout group_1">
+          <igx-icon class="icon">
+            star
+          </igx-icon>
+          <igx-icon class="icon">
+            star
+          </igx-icon>
+          <igx-icon class="icon">
+            star
+          </igx-icon>
+          <igx-icon class="icon">
+            star
+          </igx-icon>
+          <igx-icon class="icon">
+            star
+          </igx-icon>
+        </div>
+        <div class="row-layout group_2">
+          <div class="column-layout group_3">
+            <h2 class="content">
+              {{ stateService.currentlyChosenYear.value }}
+            </h2>
+          </div>
+        </div>
+        <div class="row-layout group_4">
+          <p class="ig-typography__subtitle-2 text">
+            P R E S I D E N T I A L
+          </p>
+        </div>
+        <div class="row-layout group_5">
+          <p class="ig-typography__subtitle-2 text_1">
+            E L E C T I O N
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row-layout candidates">
+      <igx-card [horizontal]="true" class="card">
+        <div class="group_6">
+          <igx-card-header>
+            <h3 igxCardHeaderTitle>
+          </h3>
+            <h5 igxCardHeaderSubtitle>
+          </h5>
+          </igx-card-header>
+          <igx-card-content class="body-content">
+            <div class="column-layout group_7">
+              <div class="column-layout group_8">
+                <h5 class="h5">
+                  {{ democratCandidate?.name }}
+                </h5>
+                <div class="row-layout dm_pill_small">
+                  <p class="ig-typography__overline text_1">
+                    DEMOCRATIC
+                  </p>
+                </div>
+              </div>
+              <div class="row-layout group_9">
+                <div class="column-layout group_10">
+                  <h4 class="content">
+                    {{ electoralVotesDemocrat?.votes }}
+                  </h4>
+                  <p class="ig-typography__subtitle-2 text_2">
+                    Electoral Votes
+                  </p>
+                </div>
+                <div class="column-layout group_11">
+                  <h4 class="content">
+                    {{ popularVotesDemocrat?.votes }}
+                  </h4>
+                  <p class="ig-typography__subtitle-2 text_2">
+                    Popular Votes
+                  </p>
+                </div>
+              </div>
+            </div>
+          </igx-card-content>
+        </div>
+        <igx-card-media width="160px" class="media-content">
+          <img [src]="democratCandidate?.imageFull" class="image" />
+        </igx-card-media>
+      </igx-card>
+      <igx-card [horizontal]="true" class="card">
+        <div class="group_6">
+          <igx-card-header>
+            <h3 igxCardHeaderTitle>
+          </h3>
+            <h5 igxCardHeaderSubtitle>
+          </h5>
+          </igx-card-header>
+          <igx-card-content class="body-content">
+            <div class="column-layout group_7">
+              <div class="column-layout group_8">
+                <h5 class="h5">
+                  {{ republicanCandidate?.name }}
+                </h5>
+                <div class="row-layout rp_pill_small">
+                  <p class="ig-typography__overline text_1">
+                    REPUBLICAN
+                  </p>
+                </div>
+              </div>
+              <div class="row-layout group_9">
+                <div class="column-layout group_10">
+                  <h4 class="h4">
+                    {{ electoralVotesRepublican?.votes }}
+                  </h4>
+                  <p class="ig-typography__subtitle-2 text_2">
+                    Electoral Votes
+                  </p>
+                </div>
+                <div class="column-layout group_11">
+                  <h4 class="h4">
+                    {{ popularVotesRepublican?.votes }}
+                  </h4>
+                  <p class="ig-typography__subtitle-2 text_2">
+                    Popular Votes
+                  </p>
+                </div>
+              </div>
+            </div>
+          </igx-card-content>
+        </div>
+        <igx-card-media width="160px" class="media-content">
+          <img [src]="republicanCandidate?.imageFull" class="image" />
+        </igx-card-media>
+      </igx-card>
+    </div>
+  </div>
+  <div class="row-layout pies_and_grid">
+    <div class="row-layout pie_charts">
+      <div class="column-layout group_12">
+        <p class="ig-typography__subtitle-2 content">
+          Electoral Vote
+        </p>
+        <igx-pie-chart [dataSource]="uSElectionsDataVoteResult" startAngle="90" labelInnerColor="#FAFAFA" [othersCategoryThreshold]="0.5" labelMemberPath="resultAsString" valueMemberPath="resultAsNumber" class="pie-chart"></igx-pie-chart>
+      </div>
+      <div class="column-layout group_12">
+        <p class="ig-typography__subtitle-2 content">
+          Popular Vote
+        </p>
+        <igx-pie-chart [dataSource]="uSElectionsDataVoteResult1" startAngle="90" labelInnerColor="#FAFAFA" [othersCategoryThreshold]="0.5" labelMemberPath="resultAsString" valueMemberPath="resultAsNumber" class="pie-chart"></igx-pie-chart>
+      </div>
+    </div>
+    <div class="column-layout group_13">
+      <igx-grid [data]="uSElectionsDataCandidateVoteResult" primaryKey="party" [allowFiltering]="true" filterMode="excelStyleFilter" class="grid">
+        <igx-column field="party" dataType="string" header="Party" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="candidateName" dataType="string" header="Candidate" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="electoralVotesNumber" dataType="number" header="Electoral Votes" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="electoralVotesPercentage" dataType="number" header="Electoral Votes (%)" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="popularVotesNumber" dataType="number" header="Popular Votes" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="popularVotesPercentage" dataType="number" header="Popular Votes (%)" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+      </igx-grid>
+    </div>
+  </div>
+  <div class="column-layout group_13">
+    <p class="ig-typography__subtitle-2 text_3">
+      Votes by State
+    </p>
+    <igx-category-chart [dataSource]="uSElectionsDataStateVoteResult" chartType="column" [xAxisLabelAngle]="60" computedPlotAreaMarginMode="series" class="category-chart"></igx-category-chart>
+    <div class="row-layout group_14">
+      <div class="row-layout sources_pill_small">
+        <p class="ig-typography__overline text_4">
+          SOURCES
+        </p>
+      </div>
+      <div class="row-layout group_15">
+        <a href="https://apnews.com/" target="_blank" class="ig-typography__caption hyperlink">
+          AP News,
+        </a>
+        <a href="https://www.politico.com/" target="_blank" class="ig-typography__caption hyperlink">
+          Politico,
+        </a>
+        <a href="https://edition.cnn.com/" target="_blank" class="ig-typography__caption hyperlink">
+          CNN Politics
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

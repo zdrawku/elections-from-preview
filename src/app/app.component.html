@@ -1,0 +1,49 @@
+<igx-navbar class="navbar">
+  <igx-navbar-action>
+    <button igxRipple igxIconButton="flat" [igxToggleAction]="navDrawer" class="icon-button">
+      <igx-icon class="icon">
+        menu
+      </igx-icon>
+    </button>
+  </igx-navbar-action>
+  <igx-navbar-title class="navbar-content">
+    <h6 class="h6">
+      US Presidential Elections over the years
+    </h6>
+  </igx-navbar-title>
+</igx-navbar>
+<div class="row-layout group"></div>
+<div class="row-layout group_1">
+  <igx-nav-drawer [isOpen]="true" [pin]="true" [pinThreshold]="720" width="105px" #navDrawer class="nav-drawer">
+    <ng-template igxDrawer>
+      <div [isHeader]="true" igxDrawerItem igxRipple>
+        <span>YEAR</span>
+      </div>
+      @for (item of uSElectionsDataYearModel; track item) {
+        <div igxDrawerItem igxRipple (click)="navDrawerItemClick(item)">
+          <span>{{ item.year }}</span>
+        </div>
+      }
+    </ng-template>
+  </igx-nav-drawer>
+  <div class="view-container">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<div class="row-layout group"></div>
+<div class="row-layout group_2">
+  <igx-icon class="icon_1">
+    star
+  </igx-icon>
+  <div class="row-layout group_3">
+    <p class="ig-typography__body-2 text">
+      Powered by
+    </p>
+    <a href="https://www.appbuilder.dev/" target="_blank" class="ig-typography__body-2 hyperlink">
+      App Builder
+    </a>
+  </div>
+  <igx-icon class="icon_1">
+    star
+  </igx-icon>
+</div>

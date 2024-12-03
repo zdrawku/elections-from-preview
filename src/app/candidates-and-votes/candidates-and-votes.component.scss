@@ -1,0 +1,371 @@
+:host {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+}
+.column-layout {
+  display: flex;
+  flex-direction: column;
+}
+.group {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 32px;
+  overflow: auto;
+  position: relative;
+  padding: 24px;
+  min-width: 50px;
+  min-height: 50px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.row-layout {
+  display: flex;
+}
+.header {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+  gap: 24px;
+  position: relative;
+  flex-shrink: 0;
+}
+.year_container {
+  justify-content: center;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  min-width: 500px;
+  min-height: 160px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.year {
+  justify-content: center;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  min-height: 160px;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+.group_1 {
+  background-color: var(--ig-primary-500);
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  gap: 18px;
+  position: relative;
+  padding: 0 16px;
+  height: 32px;
+  min-width: 50px;
+  min-height: 32px;
+  max-height: 32px;
+}
+.group_2 {
+  background-image: url("/assets/flag-gradient.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.group_3 {
+  justify-content: center;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 24px;
+  position: relative;
+  padding: 8px 0;
+  min-width: 50px;
+  min-height: 50px;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+.group_4 {
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  gap: 18px;
+  position: relative;
+  padding: 0 16px;
+  height: 32px;
+  min-width: 50px;
+  min-height: 32px;
+  max-height: 32px;
+}
+.group_5 {
+  background-color: var(--ig-secondary-700);
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  gap: 18px;
+  position: relative;
+  padding: 0 16px;
+  height: 32px;
+  min-width: 50px;
+  min-height: 32px;
+  max-height: 32px;
+}
+.candidates {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 24px;
+  position: relative;
+  min-width: 510px;
+  flex-grow: 2;
+  flex-basis: 0;
+}
+.card {
+  --ig-size: var(--ig-size-medium);
+  height: max-content;
+  min-width: 480px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.group_6 {
+  flex-grow: 1;
+}
+.group_7 {
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 16px;
+  top: -16px;
+  position: relative;
+  padding: 0 0 0 16px;
+}
+.group_8 {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 8px;
+  position: relative;
+}
+.dm_pill_small {
+  background-color: var(--ig-primary-500);
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  gap: 18px;
+  position: relative;
+  padding: 1px 8px 0;
+  height: 24px;
+  min-width: 50px;
+  min-height: 24px;
+  max-height: 30px;
+}
+.group_9 {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 16px;
+  position: relative;
+  min-width: 320px;
+}
+.group_10 {
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  position: relative;
+  min-width: 100px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.group_11 {
+  border-color: var(--ig-gray-500);
+  border-width: 0px 0px 0px 1px;
+  border-style: solid;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  position: relative;
+  padding: 0 0 0 16px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.rp_pill_small {
+  background-color: var(--ig-secondary-500);
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  gap: 18px;
+  position: relative;
+  padding: 1px 8px 0;
+  height: 24px;
+  min-width: 50px;
+  min-height: 24px;
+  max-height: 30px;
+}
+.pies_and_grid {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  gap: 24px;
+  position: relative;
+  flex-shrink: 0;
+}
+.pie_charts {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 24px;
+  position: relative;
+  min-width: 520px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.group_12 {
+  background-color: transparent;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  min-width: 240px;
+  min-height: 320px;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+.group_13 {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 16px;
+  position: relative;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.group_14 {
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  gap: 8px;
+  position: relative;
+}
+.sources_pill_small {
+  background-color: var(--ig-warn-500);
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  gap: 18px;
+  position: relative;
+  padding: 1px 8px 0;
+  height: 24px;
+  min-width: max-content;
+  min-height: 24px;
+  max-height: 24px;
+}
+.group_15 {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: baseline;
+  align-content: flex-start;
+  gap: 3px;
+  position: relative;
+}
+.icon {
+  --size: 18px;
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+  color: var(--ig-surface-500);
+}
+.content {
+  text-align: center;
+  color: var(--ig-primary-500);
+  height: max-content;
+  min-width: min-content;
+}
+.text {
+  text-align: center;
+  color: var(--ig-secondary-600);
+  height: max-content;
+  min-width: min-content;
+}
+.text_1 {
+  color: var(--ig-surface-500);
+  height: max-content;
+  min-width: min-content;
+}
+.h5 {
+  color: var(--ig-gray-800);
+  height: max-content;
+  min-width: min-content;
+}
+.text_2 {
+  text-align: center;
+  height: max-content;
+  min-width: min-content;
+}
+.image {
+  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
+}
+.h4 {
+  text-align: center;
+  color: var(--ig-secondary-500);
+  height: max-content;
+  min-width: min-content;
+}
+.text_3 {
+  color: var(--ig-primary-500);
+  height: max-content;
+  min-width: min-content;
+}
+.text_4 {
+  height: max-content;
+  min-width: min-content;
+}
+.hyperlink {
+  color: var(--ig-info-500);
+  cursor: pointer;
+  height: max-content;
+  min-width: min-content;
+  flex-shrink: 0;
+}
+.body-content {
+  min-width: 50px;
+  min-height: 50px;
+}
+.media-content {
+  min-width: 160px;
+  max-width: 160px;
+}
+.pie-chart {
+  --brushes: #273267 #DC2B38 #A8A8A8;
+  --outlines: #273267 #DC2B38 #A8A8A8;
+  min-width: 200px;
+  min-height: 200px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.category-chart {
+  --brushes: #273267 #DC2B38;
+  --outlines: #273267 #DC2B38;
+  --marker-brushes: #273267 #DC2B38;
+  --marker-outlines: #273267 #DC2B38;
+  min-width: 400px;
+  min-height: 280px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.grid {
+  --ig-size: var(--ig-size-medium);
+  min-width: 500px;
+  min-height: 224px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
